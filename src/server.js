@@ -21,7 +21,7 @@ app.get("/image/:img", (req, res, next) => {
 });
 
 app.get("/", renderFactory("posts.ejs", req => ({page: 1})));
-app.get("/post/:page", renderFactory("posts.ejs", req => ({page: req.params.page})));
+app.get("/post/:page", renderFactory("posts.ejs", req => ({page: +req.params.page})));
 app.get("/home", renderFactory("posts.ejs"));
 app.get("/about", renderFactory("about.ejs"));
 
