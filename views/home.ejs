@@ -10,5 +10,11 @@
 </head>
 <body>
     Salutation ! 
+
+    il y a <%= impose.length%> images en stock. La plus recente date de <%= impose.first.birthTimeMs %> et la plus ancinne de <%= impose.last.birthTimeMs %>
+
+    voici une image random:
+
+    <img src="image/<%= impose.random.path %>"</img>
 </body>
 </html>

@@ -15,10 +15,14 @@ function renderFactory(page){
     return (req, res) => res.render(page, {impose: ImposeService.getInstance() })
 }
 
+app.get("/image/:img", (req, res, next) => {
+    var imgName = req.params.img;
+    res.sendFile(ImposeService.getInstance().resolveFileName(imgName));
+});
+
 app.get("/", renderFactory("home.ejs"));
 app.get("/home", renderFactory("home.ejs"));
 app.get("/about", renderFactory("about.ejs"));
-app.get("/random", renderFactory("random.ejs"));
 
 
 app.listen(PORT, () => {
