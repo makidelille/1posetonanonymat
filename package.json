@@ -1,0 +1,23 @@
+{
+  "name": "1posetonanonymat",
+  "version": "1.0.0",
+  "description": "clone of late imposetonanoymat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makidelille/1posetonanonymat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makidelille/1posetonanonymat/issues"
+  },
+  "homepage": "https://github.com/makidelille/1posetonanonymat#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
