@@ -16,6 +16,8 @@ class ImposeService{
     constructor(){
         this.pathMap = [];
         this.basePath = "./img/IMPOSE TON ANONYMAT";
+        this.pageCount = 0;
+        this.pageSize = 10; // X post par pages
         this.buildIndex();
     }   
 
@@ -31,7 +33,8 @@ class ImposeService{
         console.log("Tri des images");
         this.pathMap = this.pathMap.sort((a, b) => b.birthTimeMs - a.birthTimeMs); // la plus recente en premier
 
-        console.log(`Traitement fini en ${Date.now() - timeStart}ms`)
+        this.pageCount = Math.ceil(this.length / this.pageSize);
+        console.log(`Traitement fini en ${Date.now() - timeStart}ms, ${this.pageCount} pages`);
     }
 
     resolveFileName(imgPath){
@@ -44,6 +47,22 @@ class ImposeService{
 
     get last(){
         return this.pathMap[this.pathMap.length - 1];
+    }
+
+    get pages() {
+        var arr = {
+            length: this.pageCount
+        };
+        // On construit une fake Array qui renvoit une vrai array
+        for(let i=0; i < this.pageCount; i++){
+            Object.defineProperty(arr, i, {
+                get: () => {
+                    return this.pathMap.slice(i * this.pageSize, (i+1) * this.pageSize);
+                }
+            });
+        }
+        return arr;
+
     }
 
     get random(){

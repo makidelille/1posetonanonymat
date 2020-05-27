@@ -11,8 +11,8 @@ app.use(express.urlencoded());
 app.use("/", express.static("./static"));
 
 
-function renderFactory(page){
-    return (req, res) => res.render(page, {impose: ImposeService.getInstance() })
+function renderFactory(page, optParser){
+    return (req, res) => res.render(page, Object.assign({},  optParser ? optParser(req): {}, {impose: ImposeService.getInstance() }))
 }
 
 app.get("/image/:img", (req, res, next) => {
@@ -20,8 +20,9 @@ app.get("/image/:img", (req, res, next) => {
     res.sendFile(ImposeService.getInstance().resolveFileName(imgName));
 });
 
-app.get("/", renderFactory("home.ejs"));
-app.get("/home", renderFactory("home.ejs"));
+app.get("/", renderFactory("posts.ejs", req => ({page: 1})));
+app.get("/post/:page", renderFactory("posts.ejs", req => ({page: req.params.page})));
+app.get("/home", renderFactory("posts.ejs"));
 app.get("/about", renderFactory("about.ejs"));
 
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include("./partials/header.ejs") %>
+</head>
+<body>
+
+    <% for( let index = 0; index < impose.pages[page - 1].length; index++ ) { %>
+        <%- include("./partials/image.ejs", {image: impose.pages[page - 1][index]}) %>
+    <% } %>
+    
+
+    <div class="pager">
+        <% if (page < impose.pages.length) { %>
+            <a href="/post/<%=page +1 %>"><- Précedent </a>
+        <% } %>
+        <%= page %> / <%= impose.pages.length %>
+        <% if (page > 1) { %>
+            <a href="/post/<%=page - 1 %>">Suivant -></a>
+        <% } %>
+    </div>
+    
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>

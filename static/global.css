@@ -1,3 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Duru+Sans);
 body {
-    color: red;
+    /* color: red; */
+    font-family: 'Duru Sans', sans-serif;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.post{
+    padding: 5px;
+    width: 520px;
+    margin: 0px auto 50px;
+    background: #f1f1f1aa;
+    border: 1px solid #eeeeeeaa;
+    border-radius: 2px;
+    float: none;
+}
+
+.post img{
+    width: 100%;
+}
+
+.post .time{
+    text-align: center;
+    margin: auto;
+    text-decoration: line-through;
+}
+
+.pager {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.footer {
+    background: #cccccc;
+    padding: 10px;
+    margin: 10px 0px 0px;
 }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include("./partials/header.ejs") %>
+</head>
+<body>
+    <p>
+        Salutation ! 
+    </p>
+
+    <p>
+        Il y a <%= impose.length%> images en stock. Pour commencer tu pourras trouver une image aléatoire ci-desous.
+    </p>
+
+    <%- include("./partials/image.ejs", {image: impose.random}) %>
+    
+
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
