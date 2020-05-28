@@ -1,18 +1,97 @@
 @import url(http://fonts.googleapis.com/css?family=Duru+Sans);
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     /* color: red; */
     font-family: 'Duru Sans', sans-serif;
     padding: 0px;
     margin: 0px auto;
+    background-color: #f5f5f5;
+    color: #000000;
+}
+
+nav{
+    /* height: 100px; */
+    margin: 0px auto 15px;
+    /* width: 520px; */
+}
+
+article{
+    width: 800px;
+    margin: 10px auto 80px;
+    padding: 0 100px 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #c2c2c2;
+}
+
+.center {
+    /* display: block; */
+    margin: 10px auto;
+    /* padding: 15px; */
+    /* background-color: #c2c2c2; */
+    border-radius: 5px;
+    /* border: 1px solid #263238; */
+    /* width: 520px; */
+    height: auto;
+}
+
+.navigation{
+    width: 100%;
+    text-align: center;
+
+    background-color: #f5f5f5;
+    color: #000000;
+    padding: 15px 0px 0px;
+    display: inline-block;
+}
+
+.linkContainer{
+    padding: 15px;
+}
+
+.link, .randomLink{
+    border: 1Px solid #c2c2c2;
+    border-radius: 10px;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: #000000;
+    margin: 0px 5px;
+}
+
+.randomLink{
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+    display: block;
+    box-shadow: 1px 1px #c2c2c2;
+}
+
+.link:hover, .randomLink:hover{
+    background: #c2c2c2;
+}
+
+.title{
+    margin: 15px auto;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: line-through;
+    color: #ffffff;
+    background-color: #263238;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
 }
 
 .post{
     padding: 5px;
-    width: 520px;
-    margin: 0px auto 50px;
-    background: #f1f1f1aa;
-    border: 1px solid #eeeeeeaa;
-    border-radius: 2px;
+    /* width: 520px; */
+    margin: 20px auto 30px;
+    background: #ffffff;
+    /* border: 1px solid #c2c2c2; */
+    border-radius: 5px;
     float: none;
 }
 
@@ -24,6 +103,7 @@ body {
     text-align: center;
     margin: auto;
     text-decoration: line-through;
+    color: #000000;
 }
 
 .pager {
@@ -32,7 +112,16 @@ body {
 }
 
 .footer {
-    background: #cccccc;
+    position: fixed;
+    height: 60px;
+    border-top: 1px solid #c2c2c2;
+    background: #f5f5f5;
     padding: 10px;
-    margin: 10px 0px 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.flex{
+    flex: auto;
 }

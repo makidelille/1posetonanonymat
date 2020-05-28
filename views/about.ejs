@@ -4,15 +4,23 @@
     <%- include("./partials/header.ejs") %>
 </head>
 <body>
-    <p>
-        Salutation ! 
-    </p>
 
-    <p>
-        Il y a <%= impose.length%> images en stock. Pour commencer tu pourras trouver une image aléatoire ci-desous.
-    </p>
+    <article >
+    <%- include("./partials/navbar.ejs") %>
+        <div class="center">
+            <p>
+                Salutation ! 
+            </p>
 
-    <%- include("./partials/image.ejs", {image: impose.random}) %>
+            <p>
+                Il y a <%= impose.length%> images en stock. Pour commencer tu pourras trouver une image aléatoire ci-desous.
+            </p>
+
+        </div>
+    
+        <!-- <%- include("./partials/image.ejs", {image: impose.random}) %> -->
+
+    </article>
     
 
     <%- include("./partials/footer.ejs") %>

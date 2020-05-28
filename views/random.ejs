@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include("./partials/header.ejs") %>
+</head>
+<body>
+
+    <article>
+        <%- include("./partials/navbar.ejs") %>
+        
+        <%- include("./partials/image.ejs", {image: impose.random}) %>
+    
+        <a href="" class="randomLink">Une autre !</a>
+    
+    </article>
+    
+
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
