@@ -6,6 +6,7 @@ RUN mkdir /app && mkdir /app/img
 WORKDIR /app
 
 COPY package.json .
+COPY package-lock.json .
 RUN npm ci
 
 COPY src .
