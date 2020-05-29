@@ -8,6 +8,8 @@ services:
   1mpose:
     image: makidelille/1posetonanonymat:latest
     restart: unless-stopped
+  networks:
+    - http_network
   deploy:
     labels:
       - traefik.enable=true
