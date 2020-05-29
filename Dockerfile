@@ -9,9 +9,9 @@ COPY package.json .
 COPY package-lock.json .
 RUN npm ci
 
-COPY src .
-COPY static .
-COPY views .
+COPY src src
+COPY static static
+COPY views views
 
 EXPOSE 3000
 CMD [ "node" "./src/server.js" ]
