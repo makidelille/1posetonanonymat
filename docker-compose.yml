@@ -5,16 +5,16 @@ networks:
     external: true
 
 services:
-  1mpose:
+  impose:
     image: makidelille/1posetonanonymat:latest
     restart: unless-stopped
-  networks:
-    - http_network
-  deploy:
-    labels:
-      - traefik.enable=true
-      - traefik.frontend.rule=Host:1posetonanonymat.fr
-      - traefik.port=3000
-      - traefik.docker.network=http_network
+    networks:
+      - http_network
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:1posetonanonymat.fr
+        - traefik.port=3000
+        - traefik.docker.network=http_network
     volumes:
       - ./img:/app/img
