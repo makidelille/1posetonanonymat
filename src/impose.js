@@ -15,7 +15,7 @@ class ImposeService{
 
     constructor(){
         this.pathMap = [];
-        this.basePath = "./img/IMPOSE TON ANONYMAT";
+        this.basePath = "./img";
         this.pageCount = 0;
         this.pageSize = 10; // X post par pages
         this.buildIndex();

@@ -14,4 +14,4 @@ COPY static .
 COPY views .
 
 EXPOSE 3000
-CMD [ "node" "src/server.js" ]
+CMD [ "node" "./src/server.js" ]
